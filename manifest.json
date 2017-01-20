@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Ice Extension",
+    "version": "0.1.0",
+    "description": "The play extension that I made.",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "http://*/",
+        "bookmarks",
+        "tabs",
+        "history"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "http://www.12306.cn/*" ],
+            //"css": [ "mystyle.css" ],
+            "js": [ "12306/reload.js" ]
+        }
+    ]
+}
